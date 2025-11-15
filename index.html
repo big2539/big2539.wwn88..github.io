@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แชร์กิจกรรม WINNERSLOT88</title>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180deg,#05193a,#001129,#000a18);
+      font-family: 'Prompt', sans-serif;
+      text-align: center;
+      color: white;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .promo-img {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .share-btn {
+      background: #00c3ff;
+      background: linear-gradient(90deg,#00c6ff,#0072ff);
+      padding: 15px 25px;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 85%;
+      margin-top: 10px;
+      box-shadow: 0 8px 18px rgba(0,100,255,0.4);
+    }
+
+    .box-text {
+      font-size: 20px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <img src="https://img5.pic.in.th/file/secure-sv1/85053906-2fbd-4d0f-a9d5-02a284ffd58d.jpg" class="promo-img">
+
+    <div class="box-text">⭐ กดปุ่มด้านล่างนี้เพื่อแชร์กิจกรรมให้เพื่อน/กลุ่ม ⭐</div>
+
+    <button class="share-btn" id="shareBtn">กดแชร์ให้เพื่อน/กลุ่ม</button>
+
+    <div class="box-text">✔ แชร์เลยเพื่อรับสิทธิ์กิจกรรมพิเศษ!</div>
+
+  </div>
+
+  <script>
+    const liffId = "2008464608-4g1PdQO7";
+
+    async function initLiff() {
+      await liff.init({ liffId });
+
+      document.getElementById("shareBtn").onclick = async () => {
+        if (!liff.isInClient()) {
+          alert("กรุณาเปิดหน้านี้ในแอป LINE เพื่อใช้งานการแชร์");
+          return;
+        }
+
+        const flexMsg = {
+          "type": "flex",
+          "altText": "WINNERSLOT88 - รับฟรี 100฿",
+          "contents": {
+            "type": "bubble",
+            "size": "mega",
+            "hero": {
+              "type": "image",
+              "url": "https://img5.pic.in.th/file/secure-sv1/85053906-2fbd-4d0f-a9d5-02a284ffd58d.jpg",
+              "size": "full",
+              "aspectRatio": "1:1",
+              "aspectMode": "cover"
+            },
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "backgroundColor": "#001733",
+              "paddingAll": "15px",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "รับเครดิตฟรี 100.-",
+                  "weight": "bold",
+                  "size": "xl",
+                  "color": "#ffffff",
+                  "align": "center"
+                },
+                {
+                  "type": "separator",
+                  "margin": "12px",
+                  "color": "#0a4cff"
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "margin": "lg",
+                  "spacing": "md",
+                  "contents": [
+                    {
+                      "type": "button",
+                      "style": "primary",
+                      "height": "md",
+                      "color": "#0072ff",
+                      "action": {
+                        "type": "uri",
+                        "label": "➡️รับฟรี100.-⬅️",
+                        "uri": "https://lin.ee/fMCXBFo"
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "style": "primary",
+                      "height": "md",
+                      "color": "#00bfff",
+                      "action": {
+                        "type": "uri",
+                        "label": "winnerslot88",
+                        "uri": "https://winnerslot88.com"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "styles": {
+              "body": {
+                "backgroundColor": "#001733"
+              }
+            }
+          }
+        };
+
+        await liff.shareTargetPicker([flexMsg]);
+      };
+    }
+
+    initLiff();
+  </script>
+
+</body>
+</html>
